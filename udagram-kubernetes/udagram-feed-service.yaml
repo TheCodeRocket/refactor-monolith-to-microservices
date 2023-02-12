@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: reverse-proxy
-  name: reverse-proxy
+    app: udagram-api-feed-svc
+  name: backend-feed
+  namespace: default
 spec:
   ports:
   - name: "8080"
     port: 8080
     targetPort: 8080
   selector:
-    service: reverse-proxy
-  type: LoadBalancer
+    app: udagram-api-feed

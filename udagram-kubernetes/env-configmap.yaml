@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+  namespace: default
+data:
+  POSTGRES_HOST: 90.84.23.64
+  POSTGRES_DB: postgres
+  AWS_BUCKET: bishoybucket
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  JWT_SECRET: helloworld
+  URL: http://localhost:8100
