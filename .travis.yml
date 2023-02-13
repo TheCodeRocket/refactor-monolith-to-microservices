@@ -25,7 +25,6 @@ script:
   - docker tag udagram-api-user thecoderocket/udagram-api-user:v1
   - docker tag udagram-frontend thecoderocket/udagram-frontend:v1
   
-
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push thecoderocket/reverseproxy:v1
