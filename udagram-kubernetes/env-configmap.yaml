@@ -4,9 +4,9 @@ metadata:
   name: env-config
   namespace: default
 data:
-  POSTGRES_HOST: 90.84.23.64
+  POSTGRES_HOST: database-1.ctzefvdrwj5q.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: bishoybucket
+  AWS_BUCKET: udagram-mybucket433442272749
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: helloworld
