@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: reverseproxy
-  namespace: default
   labels:
     app: reverseproxy
 spec:
@@ -16,9 +15,9 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - image: thecoderocket/reverseproxy:v1
-        name: reverseproxy
-        imagePullPolicy: Always              
-        ports:
-        - containerPort: 8080
+      - name: reverseproxy
+        image: thecoderocket/udagram-reverseproxy:v3
+        imagePullPolicy: Always
+      ports:
+        - containerPort: 80
       restartPolicy: Always
