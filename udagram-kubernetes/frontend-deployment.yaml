@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: thecoderocket/udagram-frontend:v3
+        image: thecoderocket/udagram-frontend:v4
         imagePullPolicy: Always
         ports:
         - containerPort: 80
