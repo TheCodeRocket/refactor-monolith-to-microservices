@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: thecoderocket/udagram-reverseproxy:v3
+        image: thecoderocket/udagram-reverseproxy-two:v1
         imagePullPolicy: Always
-      ports:
+        ports:
         - containerPort: 80
       restartPolicy: Always
