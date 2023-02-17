@@ -7,6 +7,6 @@ data:
   JWT_SECRET: meow
   POSTGRES_DB: postgres
   POSTGRES_HOST: database-1.ctzefvdrwj5q.us-east-1.rds.amazonaws.com
-  URL: http://localhost:8100
+  URL: http://a787f6c0632964a4ea9ff7dbee33b247-2092163431.us-east-1.elb.amazonaws.com:8100
 metadata:
   name: env-config
