@@ -6,22 +6,18 @@ metadata:
  name: udagram-backend-user
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: udagram-backend-user
   template:
     metadata:
       labels:
         app: udagram-backend-user
     spec:
       containers:
-      - image: thecoderocket/udagram-backend-user:v1
+      - image: thecoderocket/udagram-backend-user:v3
         name: udagram-backend-user
         imagePullPolicy: Always
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "250m"
-          limits:
-            memory: "2048Mi"
-            cpu: "500m"
         env:
         - name: URL
           valueFrom:
