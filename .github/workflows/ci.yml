@@ -18,15 +18,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: docker-compose -f docker-compose-build.yaml build --parallel
-    - run: docker tag udagram-reverseproxy thecoderocket/udagram-reverseproxy:v1
     - run: docker tag udagram-backend-feed thecoderocket/udagram-backend-feed:v1
     - run: docker tag udagram-backend-user thecoderocket/udagram-backend-user:v1
+    - run: docker tag udagram-reverseproxy thecoderocket/udagram-reverseproxy:latest
     - run: docker tag udagram-frontend thecoderocket/udagram-frontend:v1
 
     - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
 
-    - run: docker push thecoderocket/udagram-reverseproxy:v1
     - run: docker push thecoderocket/udagram-backend-feed:v1
     - run: docker push thecoderocket/udagram-backend-user:v1
+        - run: docker push thecoderocket/udagram-reverseproxy:latest
     - run: docker push thecoderocket/udagram-frontend:v1
 
