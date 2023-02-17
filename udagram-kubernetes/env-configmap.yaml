@@ -4,7 +4,7 @@ data:
   AWS_BUCKET: udagram-mybucket433442272749
   AWS_PROFILE: default
   AWS_REGION: us-east-1
-  JWT_SECRET: meow
+  JWT_SECRET: testing
   POSTGRES_DB: postgres
   POSTGRES_HOST: database-1.ctzefvdrwj5q.us-east-1.rds.amazonaws.com
   URL: http://a787f6c0632964a4ea9ff7dbee33b247-2092163431.us-east-1.elb.amazonaws.com:8100

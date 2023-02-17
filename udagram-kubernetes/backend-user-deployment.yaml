@@ -15,7 +15,7 @@ spec:
         app: udagram-backend-user
     spec:
       containers:
-      - image: thecoderocket/udagram-backend-user:v3
+      - image: thecoderocket/udagram-backend-user:v5
         name: udagram-backend-user
         imagePullPolicy: Always
         env:

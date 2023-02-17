@@ -15,7 +15,7 @@ spec:
         app: udagram-backend-feed
     spec:
       containers:
-      - image: thecoderocket/udagram-backend-feed:v3
+      - image: thecoderocket/udagram-backend-feed:v5
         name: udagram-backend-feed
         imagePullPolicy: Always
         env:

@@ -15,7 +15,7 @@ spec:
         app: reverse-proxy
     spec:
       containers:
-      - image: thecoderocket/udagram-reverseproxy:v3
+      - image: thecoderocket/udagram-reverseproxy:v5
         name: reverse-proxy
         imagePullPolicy: Always
         ports:
