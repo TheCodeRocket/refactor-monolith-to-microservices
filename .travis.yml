@@ -15,19 +15,19 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t reverseproxy ./udagram-reverseproxy
-  - docker build -t udagram-api-feed ./udagram-api-feed
-  - docker build -t udagram-api-user ./udagram-api-user
+  - docker build -t udagram-reverseproxy ./udagram-reverseproxy
+  - docker build -t udagram-backend-feed ./udagram-backend-feed
+  - docker build -t udagram-backend-user ./udagram-backend-user
   - docker build -t udagram-frontend ./udagram-frontend
   # Tagging
-  - docker tag reverseproxy thecoderocket/reverseproxy:v3
-  - docker tag udagram-api-feed thecoderocket/udagram-api-feed:v3
-  - docker tag udagram-api-user thecoderocket/udagram-api-user:v3
-  - docker tag udagram-frontend thecoderocket/udagram-frontend:v3
+  - docker tag udagram-reverseproxy thecoderocket/udagram-reverseproxy:v1
+  - docker tag udagram-backend-feed thecoderocket/udagram-backend-feed:v1
+  - docker tag udagram-backend-user thecoderocket/udagram-backend-user:v1
+  - docker tag udagram-frontend thecoderocket/udagram-frontend:v1
   
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push thecoderocket/reverseproxy:v3
-  - docker push thecoderocket/udagram-api-feed:v3
-  - docker push thecoderocket/udagram-api-user:v3
-  - docker push thecoderocket/udagram-frontend:v3
+  - docker push thecoderocket/udagram-reverseproxy:v1
+  - docker push thecoderocket/udagram-backend-feed:v1
+  - docker push thecoderocket/udagram-backend-user:v1
+  - docker push thecoderocket/udagram-frontend:v1
