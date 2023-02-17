@@ -5,7 +5,7 @@ metadata:
    app: udagram-backend-feed
  name: udagram-backend-feed
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: udagram-backend-feed
@@ -18,6 +18,13 @@ spec:
       - image: thecoderocket/udagram-backend-feed:v5
         name: udagram-backend-feed
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "500m"
         env:
         - name: URL
           valueFrom:

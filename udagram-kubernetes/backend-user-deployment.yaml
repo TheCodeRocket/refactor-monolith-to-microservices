@@ -18,6 +18,13 @@ spec:
       - image: thecoderocket/udagram-backend-user:v5
         name: udagram-backend-user
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "500m"
         env:
         - name: URL
           valueFrom:
